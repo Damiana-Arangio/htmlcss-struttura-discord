@@ -1,4 +1,4 @@
-/*! REGOLE GENERALI  */
+/*! REGOLE GENERALI PAGINA */
 
 /** Reset pagina */
 * {
@@ -10,4 +10,29 @@
 /** */
 body {
     /* background-color: red; */
+}
+
+/*! REGOLE GENERALI FLEXBOX */
+
+/** Flexbox con Main-Axis verticale */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/*! HEADER */
+header {
+    background-color: blue;
+    height: 100px;
+}
+
+main {
+    background-color: grey;
+    height: 300px;
+}
+
+footer {
+    background-color: black;
+    height: 100px;
+    color: white;
 }
