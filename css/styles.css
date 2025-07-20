@@ -36,8 +36,7 @@ body {
 
 /** Figli di Flex-container-layout */
 .flex-container-row > * {                        
-    border: solid 2px black;
-    border-style: dotted;
+    border: 1px dotted black;
 }
 
 /** Flex-container con Main-Axis verticale */
@@ -68,6 +67,7 @@ body {
 
 /* Logo nav */
 .logo {
+    padding: 2px;
 }
 
 /* Link nav */
@@ -78,6 +78,7 @@ body {
 /* Login nav */
 .login {
     text-align: end;
+    padding-right: 5px;
 }
 
 /** Sezione Hero-Header */
@@ -87,7 +88,7 @@ body {
 }
 
 .item-hero {
-    background-color: rgb(247, 98, 123);
+    background-color: rgb(232, 74, 237);
     flex-basis: 80%;
     height: 80%;
 }
@@ -134,6 +135,59 @@ body {
 /*! PIE' DI PAGINA */
 footer {
     background-color: black;
-    height: 100px;
     color: white;
+}
+
+/** Footer sezione link e Social */
+.footer-section-link-social {
+    flex-basis: 90%;
+}
+
+/* Footer sezione social */
+.footer-section-social {
+    flex-basis: 30%;
+    height: 90%;
+    background-color: rgb(200, 90, 108); 
+} 
+
+/* Footer sezione link */
+.footer-section-link {
+    display: flex;
+    flex-basis: 70%;
+    height: 90%;
+    background-color: rgb(37, 125, 128);
+}
+
+/* Figli di Footer sezione link */
+.footer-section-link > * {
+    border: 1px dotted white;
+    flex-basis: calc(100% / 4);
+}
+
+/** Footer separatore */
+#footer-separatore {
+    border: 1px solid white;
+    width: 100%;
+    background-color: rgb(200, 90, 108);
+}
+
+/** Footer sezione Logo e Bottone */
+.footer-section-logo-bottone {
+    flex-basis: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 192, 116);
+    margin: 10px 140px 0;
+}
+
+/* Figli di Footer sezione Logo e Bottone */
+.footer-section-logo-bottone > *
+{
+    color: black;
+    border: 2px dotted black;
+}
+
+.bottone {
+    padding: 2px;
 }
