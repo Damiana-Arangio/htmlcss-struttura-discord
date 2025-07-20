@@ -7,23 +7,34 @@
     box-sizing: border-box;
 }
 
-/* body {
-    background-color: red;
-} */
+/** Caratteristiche testo */
+body {
+}
 
+/** Altezze sezioni */
+.h-400 {
+    height: 400px;
+}
+
+.h-450 {
+    height: 450px;
+}
+
+.h-500 {
+    height: 700px;
+}
 
 /*! REGOLE GENERALI FLEXBOX  */
 
 /** Flex-container con Main-Axis orizzontale */
 .flex-container-row {
     display: flex;
-    height: 100%;
     justify-content: center;
     align-items: center;
     padding: 0 140px;
 }
 
-/* Figli di Flex-container-layout */
+/** Figli di Flex-container-layout */
 .flex-container-row > * {                        
     border: solid 2px black;
     border-style: dotted;
@@ -36,58 +47,88 @@
 }
 
 /*! INTESTAZIONE PAGINA */
-header {
-    height: 350px;
-}
 
-/** SEZIONE MAIN-HEADER */
+/** Sezione Main-Header */
 #main-header {
-    flex-basis: 20%;
+    flex-basis: 10%;
     background-color: aqua;
 }
 
 /* Barra di navigazione Header */
 #flex-nav {
-    /* justify-content: space-between; */
+    height: 100%;                           /* altezza 100% rispetto al padre -> main-header */
 }
 
 /* Logo-Link-Login */
-.items-nav
+.item-nav
 {
     flex-grow: 1;                                   /* Espansione dei flex-items: Logo-Link-Login*/
     background-color: yellow;
 }
 
-/* Logo */
+/* Logo nav */
 .logo {
 }
 
-/* Link */
+/* Link nav */
 .link {
     text-align: center;
 }
 
-/* Login */
+/* Login nav */
 .login {
     text-align: end;
 }
 
-/** SEZIONE HERO-HEADER */
+/** Sezione Hero-Header */
 #hero-header {
-    flex-basis: 80%;
+    flex-basis: 90%;
     background-color: blue;
 }
 
-.items-hero {
-    background-color: pink;
-    flex-basis: 50%;
+.item-hero {
+    background-color: rgb(247, 98, 123);
+    flex-basis: 80%;
     height: 80%;
 }
 
 /*! CONTENUTO PRINCIPALE */
-main {
+
+/** Figli di main-section server discord, canale vocale e community */
+.item-main-section-left {
+    flex-basis: 60%;
+    height: 80%;
+}
+
+.item-main-section-right {
+    flex-basis: 40%;
+    height: 80%;
+}
+
+/** Figlo di main-section tecnologia */
+.item-main-section-full {
+    flex-basis: 100%;
+    height: 80%;
+    background-color: green;
+}
+
+/*! COLORI BACKGROUND */
+
+/* Colori background */
+.bg-color-white {
+    background-color: white;
+}
+
+.bg-color-grey { 
     background-color: grey;
-    height: 300px;
+}
+
+.bg-color-pink {
+    background-color: pink;
+}
+
+.bg-color-lightblue {
+    background-color: lightblue;
 }
 
 /*! PIE' DI PAGINA */
