@@ -1,27 +1,10 @@
 /*! REGOLE GENERALI PAGINA */
 
-/** Reset pagina */
+/** RESET PAGINA */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/** Caratteristiche testo */
-body {
-}
-
-/** Altezze sezioni */
-.h-400 {
-    height: 400px;
-}
-
-.h-450 {
-    height: 450px;
-}
-
-.h-500 {
-    height: 700px;
 }
 
 /*! REGOLE GENERALI FLEXBOX  */
@@ -31,12 +14,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 140px;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
-/** Figli di Flex-container-layout */
-.flex-container-row > * {                        
-    border: 1px dotted black;
+.flex-container-column>*:not(#main-header):not(#footer-separatore):not(.footer-section-logo-bottone) {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 /** Flex-container con Main-Axis verticale */
@@ -46,10 +30,17 @@ body {
 }
 
 /*! INTESTAZIONE PAGINA */
+header {
+    height: 400px;
+}
 
 /** Sezione Main-Header */
 #main-header {
     flex-basis: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    /* Debug */
     background-color: aqua;
 }
 
@@ -61,13 +52,15 @@ body {
 /* Logo-Link-Login */
 .item-nav
 {
-    flex-grow: 1;                                   /* Espansione dei flex-items: Logo-Link-Login*/
+    flex-grow: 1;                           /* Espansione dei flex-items: Logo-Link-Login*/
+
+    /* Debug */
     background-color: yellow;
 }
 
 /* Logo nav */
 .logo {
-    padding: 2px;
+    padding-left: 5px;
 }
 
 /* Link nav */
@@ -84,61 +77,52 @@ body {
 /** Sezione Hero-Header */
 #hero-header {
     flex-basis: 90%;
+
+    /* Debug */
     background-color: blue;
 }
 
 .item-hero {
-    background-color: rgb(232, 74, 237);
     flex-basis: 80%;
-    height: 80%;
+
+    /* Debug */
+    background-color: rgb(232, 74, 237);
 }
 
 /*! CONTENUTO PRINCIPALE */
 
+/** Colori main-section */
+.bg-color-white {
+    background-color: white;
+}
+
+.bg-color-grey {
+    background-color: rgb(212, 210, 210);
+}
+
 /** Figli di main-section server discord, canale vocale e community */
 .item-main-section-left {
     flex-basis: 60%;
-    height: 80%;
 }
 
 .item-main-section-right {
     flex-basis: 40%;
-    height: 80%;
 }
 
 /** Figlo di main-section tecnologia */
 .item-main-section-full {
     flex-basis: 100%;
-    height: 80%;
+
+    /* Debug */
     background-color: green;
-}
-
-/*! COLORI BACKGROUND */
-
-/* Colori background */
-.bg-color-white {
-    background-color: white;
-}
-
-.bg-color-grey { 
-    background-color: grey;
-}
-
-.bg-color-pink {
-    background-color: pink;
-}
-
-.bg-color-lightblue {
-    background-color: lightblue;
 }
 
 /*! PIE' DI PAGINA */
 footer {
     background-color: black;
-    color: white;
 }
 
-/** Footer sezione link e Social */
+/** FOOTER SEZIONE LINK E SOCIAL */
 .footer-section-link-social {
     flex-basis: 90%;
 }
@@ -146,7 +130,8 @@ footer {
 /* Footer sezione social */
 .footer-section-social {
     flex-basis: 30%;
-    height: 90%;
+
+    /* Debug */
     background-color: rgb(200, 90, 108); 
 } 
 
@@ -154,40 +139,78 @@ footer {
 .footer-section-link {
     display: flex;
     flex-basis: 70%;
-    height: 90%;
+
+    /* Debug */
     background-color: rgb(37, 125, 128);
 }
 
 /* Figli di Footer sezione link */
 .footer-section-link > * {
-    border: 1px dotted white;
     flex-basis: calc(100% / 4);
 }
 
-/** Footer separatore */
+/** FOOTER SEPARATORE */
 #footer-separatore {
-    border: 1px solid white;
+    border: 0.5px solid white;
     width: 100%;
-    background-color: rgb(200, 90, 108);
 }
 
-/** Footer sezione Logo e Bottone */
+/** FOOTER SEZIONE LOGO E BOTTONE */
 .footer-section-logo-bottone {
     flex-basis: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(35, 192, 116);
     margin: 10px 140px 0;
+
+    /* Debug */
+    background-color: rgb(35, 192, 116);
 }
 
-/* Figli di Footer sezione Logo e Bottone */
-.footer-section-logo-bottone > *
-{
-    color: black;
-    border: 2px dotted black;
-}
-
-.bottone {
+.bottone-footer {
     padding: 2px;
+}
+
+/*! DEBUG */
+
+/** DEBUG BORDI LAYOUT */
+
+/* Bordi sezioni */
+.flex-container-row > *, .footer-section-logo-bottone > * {
+    border: 1px dotted black;
+    color: black;
+}
+
+.footer-section-link > * {
+    border: 1px dotted white;
+}
+
+/** DEBUG ALTEZZE */
+
+/* Altezza primi 3 figli di main-section */
+main > section:not(:nth-child(4)) {
+    height: 400px;
+}
+
+/* Altezza 4 figlo di main-section */
+main>section:nth-child(4) {
+    height: 500px;
+}
+
+footer {
+    height: 450px;
+}
+
+.flex-container-row > * {
+    height: 100%;
+}
+
+/** DEBUG COLORI */
+
+.bg-color-pink {
+    background-color: pink;
+}
+
+.bg-color-lightblue {
+    background-color: lightblue;
 }
