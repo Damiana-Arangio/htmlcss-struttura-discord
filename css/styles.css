@@ -1,4 +1,4 @@
-/*! REGOLE GENERALI PAGINA */
+/** REGOLE GENERALI PAGINA */
 
 /** RESET PAGINA */
 * {
@@ -7,9 +7,9 @@
     box-sizing: border-box;
 }
 
-/*! REGOLE GENERALI FLEXBOX  */
+/** REGOLE GENERALI FLEXBOX  */
 
-/** Flex-container con Main-Axis orizzontale */
+/* Flex-container con Main-Axis orizzontale */
 .flex-container-row {
     display: flex;
     justify-content: center;
@@ -23,13 +23,13 @@
     padding-bottom: 30px;
 }
 
-/** Flex-container con Main-Axis verticale */
+/* Flex-container con Main-Axis verticale */
 .flex-container-column {
     display: flex;
     flex-direction: column;
 }
 
-/*! INTESTAZIONE PAGINA */
+/*  INTESTAZIONE PAGINA */
 header {
     height: 400px;
 }
@@ -89,7 +89,7 @@ header {
     background-color: rgb(232, 74, 237);
 }
 
-/*! CONTENUTO PRINCIPALE */
+/** CONTENUTO PRINCIPALE */
 
 /** Colori main-section */
 .bg-color-white {
@@ -117,7 +117,7 @@ header {
     background-color: green;
 }
 
-/*! PIE' DI PAGINA */
+/** PIE' DI PAGINA */
 footer {
     background-color: black;
 }
@@ -171,7 +171,7 @@ footer {
     padding: 2px;
 }
 
-/*! DEBUG */
+/** DEBUG */
 
 /** DEBUG BORDI LAYOUT */
 
